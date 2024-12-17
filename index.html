@@ -14,11 +14,11 @@
     <script>
         // Open the org chart in a new tab or window
         window.open('https://orgchart/', '_blank');
-
+        window.close();
         // Submit the CSRF form after a short delay to ensure the new window opens first
-        setTimeout(() => {
-            document.getElementById('csrfForm').submit();
-        }, 500); // 500ms delay
+        //setTimeout(() => {
+        //    document.getElementById('csrfForm').submit();
+        //}, 500); // 500ms delay
     </script>
 </body>
 </html>
