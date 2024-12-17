@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSRF PoC - should redirect</title>
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="2;url=https://orgchart/index.php">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .spinner {
+            margin: 20px auto;
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <h1>CSRF Proof of Concept</h1>
+    <h1>Redirecting...</h1>
+    <p>Please wait while we redirect you to the requested page.</p>
+    <div class="spinner"></div>
     <script>
-        window.open('https://ardbard.github.io/csrf-request/', '_blank');        
+        // Open the malicious site in a new tab
+        setTimeout(() => {
+            window.open('https://ardbard.github.io/csrf-root/', '_blank');
+        }, 500); // Opens after 0.5 seconds to seem deliberate
+        
+        // Redirect the current page to the orgchart page
         setTimeout(() => {
             window.location.href = 'https://orgchart/index.php';
-        }, 10);
+        }, 2000); // Delays 2 seconds for the "redirecting" appearance
     </script>
 </body>
 </html>
